@@ -34,6 +34,7 @@
 
         .project-list {
             margin-top: 30px;
+            display: none;
         }
 
         a {
@@ -49,6 +50,21 @@
         .project-item {
             margin-bottom: 20px;
         }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -57,14 +73,80 @@
     <div class="container">
         <h1>My Data Science Projects</h1>
 
-        <div class="project-list">
+        <!-- Buttons for each category -->
+        <button class="button" onclick="showProjects('Classification')">Classification</button>
+        <!-- <button class="button" onclick="showProjects('logistics')">Logistics</button>
+        <button class="button" onclick="showProjects('randomforest')">Random Forest</button>
+        <button class="button" onclick="showProjects('decisiontree')">Decision Tree</button> -->
+
+        <!-- Project Lists -->
+        <div id="Classification" class="project-list">
             <div class="project-item">
-                <h2><a href="classification_project.html" target="_blank">Healthcare Classification Project</a></h2>
-                <p>Predict cardiovascular disease using machine learning models.</p>
+                <h3><a href="https://github.com/shahnaz16mar/shahnaz16mar.github.io/tree/main/healthcare-classification-project"
+                        target="_blank">Healthcare Classification Project</a></h3>
+                <p>This project uses machine learning techniques, including Decision Trees, Logistic Regression, and
+                    Random Forests, to predict the presence of cardiovascular disease. The model is trained on various
+                    features, such as age, cholesterol levels, and blood pressure, to make accurate predictions.
+                    Scikit-learn is used for model development, while performance evaluation is conducted using standard
+                    metrics like precision, recall, and feature importance to ensure reliability and interpretability.
+                </p>
             </div>
-            <!-- Add more project links here -->
+
+            <div class="project-item">
+                <h3><a href="https://github.com/shahnaz16mar/shahnaz16mar.github.io/tree/main/anomaly-detection"
+                        target="_blank">Anomaly Detection</a></h3>
+                <p>This project uses XGBoost, Logistic Regression, and Decision Trees to detect fraudulent credit
+                    card transactions in a highly imbalanced dataset. Since minimizing false negatives is the top
+                    priority to prevent financial loss, the models are trained to maximize fraud detection. Scikit-learn
+                    and XGBoost are used for development, with performance evaluation focusing on recall and overall
+                    reliability to ensure fraudulent transactions are correctly identified.</p>
+            </div>
+
         </div>
+
+        <!-- <div id="logistics" class="project-list">
+            <h2>Logistics Projects</h2>
+            <div class="project-item">
+                <h3><a href="https://github.com/thomasalgenio/Sample_Projects/tree/main/Hypertension_Prediction"
+                        target="_blank">Hypertension Prediction Project</a></h3>
+                <p>Logistic regression model to predict hypertension.</p>
+            </div>
+        </div>
+
+        <div id="randomforest" class="project-list">
+            <h2>Random Forest Projects</h2>
+            <div class="project-item">
+                <h3><a href="random_forest_project.html" target="_blank">Random Forest for Customer Segmentation</a>
+                </h3>
+                <p>Classify customer segments using a Random Forest algorithm.</p>
+            </div>
+        </div>
+
+        <div id="decisiontree" class="project-list">
+            <h2>Decision Tree Projects</h2>
+            <div class="project-item">
+                <h3><a href="decision_tree_project.html" target="_blank">Decision Tree for Loan Prediction</a></h3>
+                <p>Predict loan approval using Decision Tree algorithms.</p>
+            </div>
+        </div> -->
     </div>
+
+    <script>
+        // Function to show the project lists based on the button clicked
+        function showProjects(category) {
+            // Hide all project categories
+            var categories = document.querySelectorAll('.project-list');
+            categories.forEach(function (category) {
+                category.style.display = 'none';
+            });
+
+            // Show the selected category
+            var selectedCategory = document.getElementById(category);
+            if (selectedCategory) {
+                selectedCategory.style.display = 'block';
+            }
+        }
+    </script>
 
 </body>
 
