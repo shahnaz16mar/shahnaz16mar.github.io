@@ -2,7 +2,7 @@ This repository showcases a collection of data analysis, machine learning, and d
 
 The goal of this portfolio is to demonstrate my proficiency in working with various datasets, building models from scratch, and deploying them for practical use. You will find projects on:
 
-Regression analysis
-Data visualization
-Predictive modeling
-Data-driven decision-making
+1. Regression analysis
+2. Data visualization
+3. Predictive modeling
+4. Data-driven decision-making
