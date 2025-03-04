@@ -139,7 +139,7 @@ selected_year_data_bar_sorted = selected_year_data_bar.sort_values(
     "value", ascending=False
 ).iloc[:10, :]
 
-plt.style.use("seaborn")
+# plt.style.use("seaborn")
 
 fig2, ax2 = plt.subplots(figsize=(10, 6))
 
